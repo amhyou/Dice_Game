@@ -194,6 +194,9 @@ class Game:
             table = TableGeneration([d.faces for d in self.dices.dices])
             table.display()
             self.choice_selection(base)
+        else:
+            print("Your choice is not correct! try again:")
+            self.choice_selection(base)
             
 
 if __name__ == "__main__":
