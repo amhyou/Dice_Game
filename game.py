@@ -180,12 +180,14 @@ class Game:
 
 
     def choice_selection(self, base: list) -> int:
+        int_choices = []
         for i in range(len(base)):
             print(f"{i} - {base[i]}")
+            int_choices.append(i)
         print("X - exit")
         print("? - help")
         choice = input("Your selection: ")
-        if choice in "012345":
+        if choice in [str(i) for i in int_choices]:
             return int(choice)
         elif choice in "xX":
             print("The game is exited")
